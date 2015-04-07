@@ -7,6 +7,14 @@ class BugsController < ApplicationController
     @bugs = Bug.all
   end
 
+  def active
+    @active_bugs = Bug.active
+  end
+
+  def archived
+    @archived_bugs = Bug.archived
+  end
+
   # GET /bugs/1
   # GET /bugs/1.json
   def show
